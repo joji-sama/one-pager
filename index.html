@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OtakuTV Experience Center - The Future of Anime in Africa</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Bebas Neue for headings, Inter for body text -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Alpine.js for interactivity -->
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <style>
+        /* Custom Styles */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #000000;
+            color: #FFFFFF;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Bebas Neue', sans-serif;
+        }
+
+        .brand-red {
+            color: #E50914;
+        }
+        
+        .bg-brand-red {
+            background-color: #E50914;
+        }
+
+        .border-brand-red {
+            border-color: #E50914;
+        }
+
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)), url('https://placehold.co/1920x1080/000000/E50914?text=OtakuTV');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .section-glow {
+            box-shadow: 0 0 25px rgba(229, 9, 20, 0.3);
+        }
+        
+        /* Animation for elements fading in on scroll */
+        .scroll-animate {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        
+        .scroll-animate.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .stat-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(229, 9, 20, 0.5);
+        }
+    </style>
+</head>
+<body x-data>
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-black bg-opacity-50 backdrop-blur-sm transition-all duration-300">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-3xl tracking-wider text-white">Otaku<span class="brand-red">TV</span></h1>
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="#about" class="text-white hover:text-red-500 transition-colors duration-300">About</a>
+                <a href="#features" class="text-white hover:text-red-500 transition-colors duration-300">Features</a>
+                <a href="#partners" class="text-white hover:text-red-500 transition-colors duration-300">Partners</a>
+                <a href="#connect" class="bg-brand-red text-white px-5 py-2 rounded-md hover:bg-red-700 transition-colors duration-300">Connect</a>
+            </nav>
+            <button class="md:hidden text-white focus:outline-none">
+                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-bg min-h-screen flex items-center justify-center text-center">
+        <div class="container mx-auto px-6">
+            <h2 class="text-5xl md:text-7xl lg:text-8xl font-bold tracking-wider leading-tight text-white mb-4">Welcome to the Future of Anime in Africa</h2>
+            <p class="text-lg md:text-xl max-w-4xl mx-auto text-gray-200 mb-8">OtakuTV is building Africa’s first flagship anime experience hub — a multi-revenue, community-powered center for fans, partners, and brands.</p>
+            <a href="#about" class="bg-brand-red text-white text-lg font-semibold px-10 py-4 rounded-lg hover:bg-red-700 transition-all duration-300 transform hover:scale-105">Explore The Experience</a>
+        </div>
+    </section>
+
+    <!-- Main Content Wrapper -->
+    <main class="bg-black">
+
+        <!-- What Is It? Section -->
+        <section id="about" class="py-20 md:py-32">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl tracking-wider brand-red mb-2">What Is The OtakuTV Experience Center?</h2>
+                    <p class="text-lg text-gray-300 max-w-3xl mx-auto">A permanent physical hub in Lagos that blends culture, commerce, and creativity.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Feature Card 1 -->
+                    <div class="scroll-animate bg-gray-900 p-8 rounded-lg border border-gray-800 text-center transition-transform duration-300 hover:-translate-y-2 section-glow">
+                        <div class="text-5xl mb-4 brand-red">🛒</div>
+                        <h3 class="text-2xl mb-2 text-white">Official Merch Store</h3>
+                        <p class="text-gray-400">First-of-its-kind anime merchandise and collectibles outlet for authentic Japanese IP.</p>
+                    </div>
+                    <!-- Feature Card 2 -->
+                    <div class="scroll-animate bg-gray-900 p-8 rounded-lg border border-gray-800 text-center transition-transform duration-300 hover:-translate-y-2 section-glow" style="transition-delay: 100ms;">
+                        <div class="text-5xl mb-4 brand-red">☕️</div>
+                        <h3 class="text-2xl mb-2 text-white">Themed Anime Café</h3>
+                        <p class="text-gray-400">Rotating brand experiences based on top franchises like One Piece, JJK, and Demon Slayer.</p>
+                    </div>
+                    <!-- Feature Card 3 -->
+                    <div class="scroll-animate bg-gray-900 p-8 rounded-lg border border-gray-800 text-center transition-transform duration-300 hover:-translate-y-2 section-glow" style="transition-delay: 200ms;">
+                        <div class="text-5xl mb-4 brand-red">✈️</div>
+                        <h3 class="text-2xl mb-2 text-white">Anime Tourism Desk</h3>
+                        <p class="text-gray-400">Booking point for OtakuTV’s Japan Excursion and pilgrimage trips to iconic anime locations.</p>
+                    </div>
+                    <!-- Feature Card 4 -->
+                    <div class="scroll-animate bg-gray-900 p-8 rounded-lg border border-gray-800 text-center transition-transform duration-300 hover:-translate-y-2 section-glow" style="transition-delay: 300ms;">
+                        <div class="text-5xl mb-4 brand-red">🎥</div>
+                        <h3 class="text-2xl mb-2 text-white">Event & Screening Hall</h3>
+                        <p class="text-gray-400">A curated space for meetups, fan screenings, livestreams, and talent Q&As.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why It Matters Section -->
+        <section id="features" class="bg-gray-900 py-20 md:py-32">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl md:text-5xl tracking-wider brand-red mb-12">Why It Matters</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                    <!-- Stat Card 1 -->
+                    <div class="scroll-animate bg-black p-8 rounded-lg transition-transform duration-300 stat-card">
+                        <h3 class="text-5xl font-bold brand-red mb-3">Fastest-Growing</h3>
+                        <p class="text-lg text-gray-300">Africa is home to the fastest-growing anime audience in the world.</p>
+                    </div>
+                    <!-- Stat Card 2 -->
+                    <div class="scroll-animate bg-black p-8 rounded-lg transition-transform duration-300 stat-card" style="transition-delay: 150ms;">
+                        <h3 class="text-5xl font-bold brand-red mb-3">First Mover</h3>
+                        <p class="text-lg text-gray-300">No permanent anime centers or licensed infrastructure exist on the continent yet.</p>
+                    </div>
+                    <!-- Stat Card 3 -->
+                    <div class="scroll-animate bg-black p-8 rounded-lg transition-transform duration-300 stat-card" style="transition-delay: 300ms;">
+                        <h3 class="text-5xl font-bold brand-red mb-3">The Bridge</h3>
+                        <p class="text-lg text-gray-300">As Japan expands its cultural footprint, we are the essential connection.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Who We Are Section -->
+        <section class="py-20 md:py-32">
+            <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="scroll-animate">
+                    <h2 class="text-4xl md:text-5xl tracking-wider brand-red mb-4">Who We Are</h2>
+                    <p class="text-lg text-gray-300 mb-6">OtakuTV is Nigeria’s leading anime event and fan platform, with a thriving digital and physical presence. We have a passionate team with boots on the ground and vision in the sky.</p>
+                    <div class="flex space-x-8">
+                        <div>
+                            <span class="text-5xl font-bold brand-red">20,000+</span>
+                            <p class="text-gray-400">Engaged Fans</p>
+                        </div>
+                        <div>
+                            <span class="text-5xl font-bold brand-red">9</span>
+                            <p class="text-gray-400">Successful Conventions</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="scroll-animate rounded-lg overflow-hidden section-glow">
+                    <img src="https://placehold.co/600x400/1a1a1a/E50914?text=Our+Community" alt="OtakuTV Community Event" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </section>
+
+        <!-- What We're Looking For Section -->
+        <section id="partners" class="bg-gray-900 py-20 md:py-32">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl md:text-5xl tracking-wider brand-red mb-12">What We’re Looking For</h2>
+                <div class="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-left">
+                    <div class="scroll-animate">
+                        <h3 class="text-2xl text-white mb-2">Licensing Partners</h3>
+                        <p class="text-gray-400">Merch, cafes, screenings, character IPs.</p>
+                    </div>
+                    <div class="scroll-animate" style="transition-delay: 100ms;">
+                        <h3 class="text-2xl text-white mb-2">Tourism Operators</h3>
+                        <p class="text-gray-400">Collaborators for Japan tours and cultural trips.</p>
+                    </div>
+                    <div class="scroll-animate" style="transition-delay: 200ms;">
+                        <h3 class="text-2xl text-white mb-2">Investors & Sponsors</h3>
+                        <p class="text-gray-400">Cultural investors backing our vision.</p>
+                    </div>
+                     <div class="scroll-animate" style="transition-delay: 300ms;">
+                        <h3 class="text-2xl text-white mb-2">Space & Retail Partners</h3>
+                        <p class="text-gray-400">Food, retail, and venue partners in Lagos & beyond.</p>
+                    </div>
+                </div>
+                <div class="mt-16 scroll-animate">
+                    <a href="#connect" class="bg-brand-red text-white text-lg font-semibold px-10 py-4 rounded-lg hover:bg-red-700 transition-all duration-300 transform hover:scale-105">Become a Partner</a>
+                </div>
+            </div>
+        </section>
+        
+         <!-- Final Quote Section -->
+        <section class="py-20 md:py-24">
+            <div class="container mx-auto px-6 text-center">
+                 <p class="text-3xl md:text-4xl font-semibold italic text-white max-w-4xl mx-auto leading-relaxed">"Africa is not waiting to be part of anime culture. <span class="brand-red">We already are.</span> Join us in building the future."</p>
+            </div>
+        </section>
+
+
+    </main>
+
+    <!-- Footer -->
+    <footer id="connect" class="bg-gray-900 border-t-4 border-brand-red">
+        <div class="container mx-auto px-6 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <!-- About & Socials -->
+                <div>
+                    <h3 class="text-3xl tracking-wider text-white">Otaku<span class="brand-red">TV</span></h3>
+                    <p class="text-gray-400 mt-2">Building the home for anime in Africa.</p>
+                    <div class="flex space-x-4 mt-6">
+                        <a href="https://www.instagram.com/otaku.tv_ng" target="_blank" class="text-gray-400 hover:text-white transition-colors duration-300">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12.315 2c-4.42 0-7.74.004-9.923.05C.42 2.115 0 2.584 0 4.685v14.63C0 21.416.42 21.885 2.392 21.95 4.573 22.004 7.894 22 12.315 22s7.74-.004 9.923-.05c1.972-.065 2.392-.534 2.392-2.635V4.685c0-2.101-.42-2.57-2.392-2.635C20.056 2.004 16.735 2 12.315 2zM8.35 4.415c-1.25.02-2.22.05-2.82.07a.75.75 0 00-.75.75v13.53a.75.75 0 00.75.75c.6.02 1.57.05 2.82.07h7.33c1.25-.02 2.22-.05 2.82-.07a.75.75 0 00.75-.75V5.235a.75.75 0 00-.75-.75c-.6-.02-1.57-.05-2.82-.07H8.35zm3.965 3.32a4.25 4.25 0 100 8.5 4.25 4.25 0 000-8.5zm-2.75 4.25a2.75 2.75 0 115.5 0 2.75 2.75 0 01-5.5 0z" clip-rule="evenodd" /></svg>
+                        </a>
+                         <a href="https://x.com/otaku.tv_ng" target="_blank" class="text-gray-400 hover:text-white transition-colors duration-300">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" /></svg>
+                        </a>
+                    </div>
+                </div>
+                <!-- Quick Links -->
+                <div>
+                     <h4 class="text-xl text-white tracking-wider">Connect</h4>
+                     <ul class="mt-4 space-y-2">
+                        <li><a href="mailto:hello@otakutv.co" class="text-gray-400 hover:brand-red transition-colors duration-300">hello@otakutv.co</a></li>
+                        <li><a href="https://www.otakutv.co" target="_blank" class="text-gray-400 hover:brand-red transition-colors duration-300">www.otakutv.co</a></li>
+                     </ul>
+                </div>
+                 <!-- Media Kit -->
+                <div>
+                    <h4 class="text-xl text-white tracking-wider">Media & Deck</h4>
+                    <p class="text-gray-400 mt-4 mb-4">Get our media kit and full investment deck.</p>
+                    <a href="#" class="bg-white text-black font-semibold px-6 py-3 rounded-md hover:bg-gray-300 transition-colors duration-300">Download Deck</a>
+                </div>
+            </div>
+            <div class="mt-12 pt-8 border-t border-gray-800 text-center text-gray-500">
+                &copy; 2024 OtakuTV. All Rights Reserved. Designed for the community.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple scroll animation trigger
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            document.querySelectorAll('.scroll-animate').forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>
